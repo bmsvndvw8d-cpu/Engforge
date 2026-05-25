@@ -1,0 +1,103 @@
+@import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+
+* {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family:
+    'SUIT',
+    sans-serif;
+}
+
+body {
+
+  background:
+    linear-gradient(
+      135deg,
+      #101820,
+      #1a2632
+    );
+
+  min-height: 100vh;
+
+  color: white;
+
+  padding: 80px;
+}
+
+.help-container {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+h1 {
+
+  font-size: 56px;
+
+  margin-bottom: 50px;
+}
+
+.help-card {
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border-radius: 24px;
+
+  padding: 32px;
+
+  margin-bottom: 24px;
+
+  backdrop-filter: blur(10px);
+}
+
+.help-card h2 {
+
+  font-size: 28px;
+
+  margin-bottom: 18px;
+
+  color: #ff8c42;
+}
+
+.help-card p {
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.75);
+}
+
+.back-btn {
+
+  margin-top: 20px;
+
+  width: 220px;
+  height: 62px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b00,
+      #ff8c42
+    );
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}

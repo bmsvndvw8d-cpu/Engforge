@@ -1,0 +1,431 @@
+@import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+
+* {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family:
+    'SUIT',
+    sans-serif;
+}
+
+body {
+
+  background: #f8fafc;
+
+  color: #101820;
+
+  overflow: hidden;
+}
+
+/* 전체 */
+
+.layout {
+
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+}
+
+/* 사이드바 */
+
+.sidebar {
+
+  width: 110px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #101820,
+      #1a2632
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 30px;
+
+  flex-shrink: 0;
+}
+
+/* 로고 */
+
+.logo {
+
+  font-size: 44px;
+
+  margin-bottom: 40px;
+
+  filter:
+    drop-shadow(
+      0 0 12px
+      rgba(255,107,0,0.4)
+    );
+}
+
+/* 메뉴 */
+
+.menu {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* 메뉴 버튼 */
+
+.menu-btn {
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 18px;
+
+  border: none;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+
+  background:
+    rgba(255,140,66,0.25);
+}
+
+.menu-btn.active {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b00,
+      #ff8c42
+    );
+
+  color: white;
+}
+
+/* 메인 */
+
+.main {
+
+  flex: 1;
+
+  padding: 50px 60px;
+
+  overflow-y: auto;
+}
+
+/* 상단 */
+
+.topbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+}
+
+/* 제목 */
+
+.page-title {
+
+  font-size: 68px;
+
+  font-weight: 900;
+
+  color: #101820;
+}
+
+.sub-title {
+
+  margin-top: 12px;
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  color: #64748b;
+}
+
+/* 오른쪽 */
+
+.top-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* 문제지 버튼 */
+
+.create-btn {
+
+  width: 190px;
+  height: 88px;
+
+  border: none;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b00,
+      #ff8c42
+    );
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.create-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(255,107,0,0.25);
+}
+
+/* 유저 */
+
+.user-box {
+
+  height: 88px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+/* 이름 */
+
+.user-name {
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* 로그아웃 */
+
+.logout-btn {
+
+  margin-top: 10px;
+
+  background: none;
+
+  border: none;
+
+  padding: 0;
+
+  text-align: left;
+
+  color: #64748b;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+
+  color: #ff6b00;
+}
+
+/* 섹션 */
+
+.section {
+
+  margin-top: 70px;
+}
+
+/* 제목 */
+
+.section-title {
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  margin-bottom: 32px;
+}
+
+/* 카드 스크롤 */
+
+.card-scroll {
+
+  display: flex;
+
+  gap: 28px;
+
+  overflow-x: auto;
+
+  padding-bottom: 10px;
+}
+
+/* 카드 */
+
+.card {
+
+  min-width: 280px;
+
+  height: 360px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(15,23,42,0.08);
+
+  transition: 0.2s;
+}
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px
+    rgba(255,107,0,0.12);
+}
+
+/* 썸네일 */
+
+.card-thumbnail {
+
+  width: 100%;
+  height: 210px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #101820,
+      #1a2632
+    );
+
+  margin-bottom: 20px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* 불빛 효과 */
+
+.card-thumbnail::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,107,0,0.35),
+      transparent 70%
+    );
+
+  top: -60px;
+  right: -60px;
+}
+
+/* 카드 제목 */
+
+.card-title {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #101820;
+}
+
+/* 카드 설명 */
+
+.card-desc {
+
+  margin-top: 12px;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+/* 도움말 */
+
+.help-btn {
+
+  position: fixed;
+
+  right: 36px;
+  bottom: 36px;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b00,
+      #ff8c42
+    );
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px
+    rgba(255,107,0,0.25);
+}

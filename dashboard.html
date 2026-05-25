@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>EngForge</title>
+
+  <link
+    rel="stylesheet"
+    href="dashboard.css">
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- 사이드바 -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+
+        🔥
+
+      </div>
+
+      <div class="menu">
+
+        <button class="menu-btn active">
+          1
+        </button>
+
+        <button class="menu-btn">
+          2
+        </button>
+
+        <button class="menu-btn">
+          3
+        </button>
+
+        <button class="menu-btn">
+          4
+        </button>
+
+        <button class="menu-btn">
+          5
+        </button>
+
+      </div>
+
+    </aside>
+
+    <!-- 메인 -->
+
+    <main class="main">
+
+      <!-- 상단 -->
+
+      <div class="topbar">
+
+        <div>
+
+          <h1 class="page-title">
+
+            EngForge
+
+          </h1>
+
+          <p class="sub-title">
+
+            문제를 단련하고,
+            교재를 제작하다.
+
+          </p>
+
+        </div>
+
+        <!-- 오른쪽 -->
+
+        <div class="top-right">
+
+          <button class="create-btn">
+
+            문제지 만들기
+
+          </button>
+
+          <div class="user-box">
+
+            <div class="user-name">
+
+              👤
+              <span id="userName"></span> 님
+
+            </div>
+
+            <button
+              id="logoutBtn"
+              class="logout-btn">
+
+              로그아웃
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 카드 섹션 -->
+
+      <section class="section">
+
+        <h2 class="section-title">
+
+          내가 만든 문제지
+
+        </h2>
+
+        <div class="card-scroll">
+
+          <!-- 카드 -->
+
+          <div class="card">
+
+            <div class="card-thumbnail">
+            </div>
+
+            <div class="card-title">
+
+              2026 수능
+              영어 문제지
+
+            </div>
+
+            <div class="card-desc">
+
+              제작일 :
+              2026.05.25
+
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <div class="card-thumbnail">
+            </div>
+
+            <div class="card-title">
+
+              수능 영어
+
+            </div>
+
+            <div class="card-desc">
+
+              제작일 :
+              2026.05.25
+
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <div class="card-thumbnail">
+            </div>
+
+            <div class="card-title">
+
+              영어 독해
+              킬러 문제
+
+            </div>
+
+            <div class="card-desc">
+
+              제작일 :
+              2026.05.25
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- 도움말 -->
+
+  <button
+  class="help-btn"
+  onclick="location.href='help.html'">
+
+  ?
+
+</button>
+
+  <script
+    type="module"
+    src="dashboard.js">
+
+  </script>
+
+</body>
+
+</html>
