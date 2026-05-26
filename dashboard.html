@@ -2,108 +2,73 @@
 <html lang="ko">
 
 <head>
-
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1.0" />
 
-  <title>EngForge</title>
+  <title>Dashboard</title>
 
   <link
     rel="stylesheet"
-    href="dashboard.css">
-
+    href="dashboard.css" />
 </head>
 
 <body>
 
   <div class="layout">
 
-    <!-- 사이드바 -->
+    <!-- SIDEBAR -->
 
     <aside class="sidebar">
 
-      <div class="logo">
+      <div class="sidebar-logo">🔥</div>
 
-        🔥
+      <div class="sidebar-menu">
 
-      </div>
-
-      <div class="menu">
-
-        <button class="menu-btn active">
-          1
-        </button>
-
-        <button class="menu-btn">
-          2
-        </button>
-
-        <button class="menu-btn">
-          3
-        </button>
-
-        <button class="menu-btn">
-          4
-        </button>
-
-        <button class="menu-btn">
-          5
-        </button>
+        <button class="menu-btn active">1</button>
+        <button class="menu-btn">2</button>
+        <button class="menu-btn">3</button>
+        <button class="menu-btn">4</button>
+        <button class="menu-btn">5</button>
 
       </div>
 
     </aside>
 
-    <!-- 메인 -->
+    <!-- MAIN -->
 
-    <main class="main">
-
-      <!-- 상단 -->
+    <main class="main-content">
 
       <div class="topbar">
 
-        <div>
+        <div class="hero">
 
-          <h1 class="page-title">
+          <h1>EngForge</h1>
 
-            EngForge
-
-          </h1>
-
-          <p class="sub-title">
-
+          <p>
             문제를 단련하고,
             교재를 제작하다.
-
           </p>
 
         </div>
 
-        <!-- 오른쪽 -->
-
         <div class="top-right">
 
           <button class="create-btn">
-
             문제지 만들기
-
           </button>
 
           <div class="user-box">
 
             <div class="user-name">
-
-              👤
-              <span id="userName"></span> 님
-
+              👤 채애앤니 님
             </div>
 
             <button
-              id="logoutBtn"
-              class="logout-btn">
+              class="logout-btn"
+              onclick="logout()">
 
               로그아웃
 
@@ -115,81 +80,37 @@
 
       </div>
 
-      <!-- 카드 섹션 -->
+      <!-- CARDS -->
 
-      <section class="section">
+      <section class="cards">
 
-        <h2 class="section-title">
+        <div class="card">
 
-          내가 만든 문제지
+          <div class="card-thumb"></div>
 
-        </h2>
+          <h3>2026 수능 영어 문제지</h3>
 
-        <div class="card-scroll">
+          <p>제작일 : 2026.05.25</p>
 
-          <!-- 카드 -->
+        </div>
 
-          <div class="card">
+        <div class="card">
 
-            <div class="card-thumbnail">
-            </div>
+          <div class="card-thumb"></div>
 
-            <div class="card-title">
+          <h3>확률과 통계</h3>
 
-              2026 수능
-              영어 문제지
+          <p>제작일 : 2026.05.25</p>
 
-            </div>
+        </div>
 
-            <div class="card-desc">
+        <div class="card">
 
-              제작일 :
-              2026.05.25
+          <div class="card-thumb"></div>
 
-            </div>
+          <h3>미적분 킬러 문제</h3>
 
-          </div>
-
-          <div class="card">
-
-            <div class="card-thumbnail">
-            </div>
-
-            <div class="card-title">
-
-              수능 영어
-
-            </div>
-
-            <div class="card-desc">
-
-              제작일 :
-              2026.05.25
-
-            </div>
-
-          </div>
-
-          <div class="card">
-
-            <div class="card-thumbnail">
-            </div>
-
-            <div class="card-title">
-
-              영어 독해
-              킬러 문제
-
-            </div>
-
-            <div class="card-desc">
-
-              제작일 :
-              2026.05.25
-
-            </div>
-
-          </div>
+          <p>제작일 : 2026.05.25</p>
 
         </div>
 
@@ -199,19 +120,24 @@
 
   </div>
 
-  <!-- 도움말 -->
+  <!-- HELP -->
 
   <button
-  class="help-btn"
-  onclick="location.href='help.html'">
+    class="help-btn"
+    onclick="location.href='help.html'">
 
-  ?
+    ?
 
-</button>
+  </button>
 
-  <script
-    type="module"
-    src="dashboard.js">
+  <script>
+
+    function logout() {
+
+      localStorage.removeItem("currentUser");
+
+      location.href = "login.html";
+    }
 
   </script>
 
