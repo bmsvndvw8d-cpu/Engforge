@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0" />
@@ -14,218 +11,188 @@
   <link
     rel="stylesheet"
     href="dashboard.css" />
-
 </head>
 
 <body>
 
-  <div class="layout">
+  <!-- SIDEBAR -->
 
-    <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-    <aside class="sidebar">
+    <div class="sidebar-logo">
+      🔥
+    </div>
 
-      <div class="logo">
-        🔥
+    <div class="sidebar-menu">
+
+      <button class="menu-btn active">1</button>
+      <button class="menu-btn">2</button>
+      <button class="menu-btn">3</button>
+      <button class="menu-btn">4</button>
+      <button class="menu-btn">5</button>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <!-- TOP -->
+
+    <div class="top-bar">
+
+      <div class="title-wrap">
+
+        <h1>EngForge</h1>
+
+        <p>
+          문제를 단련하고,
+          교재를 제작하다.
+        </p>
+
       </div>
 
-      <div class="menu-list">
+      <div class="user-wrap">
 
-        <button class="menu-btn active">1</button>
-        <button class="menu-btn">2</button>
-        <button class="menu-btn">3</button>
-        <button class="menu-btn">4</button>
-        <button class="menu-btn">5</button>
+        <button class="create-btn">
+          문제지 만들기
+        </button>
+
+        <div class="user-box">
+
+          <div class="user-name">
+            👤 채애엔니 님
+          </div>
+
+          <a
+            href="login.html"
+            class="logout">
+
+            로그아웃
+
+          </a>
+
+        </div>
 
       </div>
 
-    </aside>
+    </div>
 
-    <!-- MAIN -->
+    <!-- FILTER -->
 
-    <main class="main">
-      <div class="main-inner">
-      </main>
-      </div>
+    <div class="filter-row">
 
-      <!-- TOP -->
+      <button class="filter-chip">
+        제작날짜순
+      </button>
 
-      <header class="topbar">
+      <button class="filter-chip">
+        난이도순
+      </button>
+
+      <button class="filter-chip">
+        문항수순
+      </button>
+
+    </div>
+
+    <!-- CARD GRID -->
+
+    <section class="card-grid">
+
+      <!-- CARD -->
+
+      <div class="card">
 
         <div>
 
-          <h1>EngForge</h1>
+          <h2>
+            2026 수능 영어 실전 12회
+          </h2>
 
-          <p>
-            문제를 단련하고,
-            교재를 제작하다.
-          </p>
-
-        </div>
-
-        <div class="top-right">
-
-          <button class="create-btn">
-            문제지 만들기
-          </button>
-
-          <div class="user-box">
-
-            <div class="user-name">
-              👤 채애앤니 님
-            </div>
-
-            <button
-              class="logout-btn"
-              onclick="logout()">
-
-              로그아웃
-
-            </button>
-
+          <div class="card-sub">
+            고3 · 영어
           </div>
 
-        </div>
+          <div class="card-tags">
 
-      </header>
-
-      <!-- FILTER -->
-
-      <section class="filter-bar">
-
-        <button class="filter active">
-          최신순
-        </button>
-
-        <button class="filter">
-          제작날짜순
-        </button>
-
-        <button class="filter">
-          난이도순
-        </button>
-
-        <button class="filter">
-          문제수순
-        </button>
-
-      </section>
-
-      <!-- WORKSHEET -->
-
-      <section class="worksheet-list">
-
-        <div class="worksheet-card">
-
-          <div class="card-top">
-
-            <div>
-
-              <h2>
-                2026 수능 영어 실전 12회
-              </h2>
-
-              <span>
-                고3 · 영어
-              </span>
-
-            </div>
-
-            <div class="difficulty high">
-              중상
-            </div>
-
-          </div>
-
-          <div class="card-middle">
-
-            <div class="meta">
-              문항 28개
-            </div>
-
-            <div class="meta">
+            <div class="tag">
               듣기 포함
             </div>
 
-            <div class="meta">
+            <div class="tag">
               PDF 생성 완료
             </div>
 
           </div>
 
-          <div class="card-bottom">
+        </div>
 
-            <span>
-              최종 수정 · 2시간 전
-            </span>
+        <div class="card-bottom">
 
-            <button>
-              열기
-            </button>
-
+          <div class="card-sub">
+            최종 수정 · 3시간 전
           </div>
+
+          <button class="open-btn">
+            열기
+          </button>
 
         </div>
 
-        <!-- CARD -->
+      </div>
 
-        <div class="worksheet-card">
+      <!-- CARD -->
 
-          <div class="card-top">
+      <div class="card">
 
-            <div>
+        <div>
 
-              <h2>
-                고2 미적분 킬러 특강
-              </h2>
+          <h2>
+            고2 미적분 킬러 특강
+          </h2>
 
-              <span>
-                고2 · 수학
-              </span>
-
-            </div>
-
-            <div class="difficulty mid">
-              중
-            </div>
-
+          <div class="card-sub">
+            고2 · 수학
           </div>
 
-          <div class="card-middle">
+          <div class="card-tags">
 
-            <div class="meta">
+            <div class="tag">
               문항 16개
             </div>
 
-            <div class="meta">
+            <div class="tag">
               서술형 포함
             </div>
 
-            <div class="meta">
+            <div class="tag">
               제작중
             </div>
 
           </div>
 
-          <div class="card-bottom">
+        </div>
 
-            <span>
-              최종 수정 · 1일 전
-            </span>
+        <div class="card-bottom">
 
-            <button>
-              열기
-            </button>
-
+          <div class="card-sub">
+            최종 수정 · 1일 전
           </div>
+
+          <button class="open-btn">
+            열기
+          </button>
 
         </div>
 
-      </section>
+      </div>
 
-    </main>
+    </section>
 
-  </div>
+  </main>
 
   <!-- HELP -->
 
@@ -237,17 +204,5 @@
 
   </button>
 
-  <script>
-
-    function logout() {
-
-      localStorage.removeItem("currentUser");
-
-      location.href = "login.html";
-    }
-
-  </script>
-
 </body>
-
 </html>
