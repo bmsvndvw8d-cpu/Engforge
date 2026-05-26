@@ -6,10 +6,13 @@
 
 body {
   font-family: "Pretendard", sans-serif;
+
   background:
-    radial-gradient(circle at top right,
-      rgba(255, 115, 0, 0.18),
-      transparent 30%),
+    radial-gradient(
+      circle at top right,
+      rgba(255,115,0,0.16),
+      transparent 28%
+    ),
     #020817;
 
   min-height: 100vh;
@@ -17,84 +20,109 @@ body {
   overflow-x: hidden;
 }
 
+/* 전체 */
+
 .login-page {
+
   width: 100%;
+
   min-height: 100vh;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  padding: 40px;
+  padding: 32px;
 }
 
+/* 박스 */
+
 .login-box {
+
   width: 100%;
-  max-width: 1500px;
-  min-height: 860px;
+
+  max-width: 1280px;
+
+  min-height: 760px;
 
   display: flex;
 
-  background: rgba(5, 15, 32, 0.92);
+  background:
+    rgba(5,15,32,0.92);
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border:
+    1px solid rgba(255,255,255,0.06);
 
-  border-radius: 40px;
+  border-radius: 34px;
 
   overflow: hidden;
 
   backdrop-filter: blur(20px);
 }
 
-/* LEFT */
+/* =========================
+   LEFT
+========================= */
 
 .login-left {
-  flex: 1.2;
+
+  flex: 1.08;
 
   position: relative;
 
   overflow: hidden;
 
-  padding: 100px;
+  padding: 72px;
 }
 
+/* glow */
+
 .fire-bg {
+
   position: absolute;
 
-  width: 700px;
-  height: 700px;
+  width: 560px;
+  height: 560px;
 
-  right: -140px;
+  right: -120px;
   top: 50%;
 
   transform: translateY(-50%);
 
   background:
-    radial-gradient(circle,
-      rgba(255,115,0,0.45),
-      rgba(255,115,0,0.1),
-      transparent 72%);
+    radial-gradient(
+      circle,
+      rgba(255,115,0,0.38),
+      rgba(255,115,0,0.08),
+      transparent 72%
+    );
 
-  filter: blur(40px);
+  filter: blur(36px);
 
-  animation: fireMove 6s ease-in-out infinite;
+  animation:
+    fireMove 7s ease-in-out infinite;
 }
 
 @keyframes fireMove {
 
   0% {
+
     transform:
       translateY(-50%)
       scale(1);
   }
 
   50% {
+
     transform:
       translateY(-52%)
-      scale(1.06);
+      scale(1.05);
   }
 
   100% {
+
     transform:
       translateY(-50%)
       scale(1);
@@ -102,41 +130,63 @@ body {
 }
 
 .left-content {
+
   position: relative;
+
   z-index: 10;
 }
 
+/* 로고 */
+
 .logo {
+
   color: #ff8b38;
 
-  font-size: 42px;
+  font-size: 26px;
+
   font-weight: 800;
 
-  margin-bottom: 80px;
+  margin-bottom: 56px;
 }
 
+/* 제목 */
+
 .left-content h1 {
-  font-size: 120px;
+
+  font-size: 86px;
+
   font-weight: 900;
 
-  line-height: 1.02;
+  line-height: 1.04;
+
+  letter-spacing: -4px;
 
   color: white;
 
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
+
+/* 설명 */
 
 .left-content p {
-  font-size: 30px;
-  line-height: 1.8;
 
-  color: rgba(255,255,255,0.7);
+  font-size: 22px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.66);
+
+  font-weight: 500;
 }
 
-/* RIGHT */
+/* =========================
+   RIGHT
+========================= */
 
 .login-right {
-  width: 520px;
+
+  width: 460px;
 
   background:
     linear-gradient(
@@ -145,63 +195,98 @@ body {
       rgba(2,8,23,0.98)
     );
 
-  padding: 90px 60px;
+  padding: 72px 46px;
 
   display: flex;
+
   flex-direction: column;
+
+  justify-content: center;
 }
 
 .mobile-logo {
+
   display: none;
 }
 
+/* 로그인 */
+
 .login-right h2 {
-  font-size: 68px;
+
+  font-size: 52px;
+
   font-weight: 900;
 
   color: white;
 
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
+/* form */
+
 #loginForm {
+
   display: flex;
+
   flex-direction: column;
 }
 
+/* input */
+
 .login-right input {
+
   width: 100%;
-  height: 84px;
+
+  height: 66px;
 
   border: none;
 
-  border-radius: 28px;
+  border-radius: 22px;
 
-  padding: 0 28px;
+  padding: 0 24px;
 
-  background: rgba(255,255,255,0.08);
+  background:
+    rgba(255,255,255,0.06);
 
   color: white;
 
-  font-size: 22px;
+  font-size: 18px;
 
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 
   outline: none;
+
+  transition: 0.2s;
+}
+
+.login-right input:focus {
+
+  background:
+    rgba(255,255,255,0.09);
+
+  border:
+    1px solid rgba(255,140,66,0.3);
 }
 
 .login-right input::placeholder {
-  color: rgba(255,255,255,0.4);
+
+  color:
+    rgba(255,255,255,0.35);
 }
+
+/* 버튼 */
 
 .main-btn,
 .sub-btn {
+
   width: 100%;
-  height: 86px;
 
-  border-radius: 30px;
+  height: 68px;
 
-  font-size: 30px;
+  border-radius: 24px;
+
+  font-size: 22px;
+
   font-weight: 800;
 
   cursor: pointer;
@@ -209,188 +294,261 @@ body {
   transition: 0.25s;
 }
 
+/* 메인 */
+
 .main-btn {
+
   background: #ff7a1a;
 
   color: white;
 
   border: none;
 
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .main-btn:hover {
-  transform: translateY(-3px);
+
+  transform: translateY(-2px);
 
   box-shadow:
-    0 10px 30px rgba(255,122,26,0.35);
+    0 10px 26px
+    rgba(255,122,26,0.28);
 }
 
+/* 서브 */
+
 .sub-btn {
-  margin-top: 24px;
+
+  margin-top: 18px;
 
   background: transparent;
 
-  border: 1px solid rgba(255,255,255,0.12);
+  border:
+    1px solid rgba(255,255,255,0.08);
 
   color: white;
 }
 
 .sub-btn:hover {
-  background: rgba(255,255,255,0.05);
+
+  background:
+    rgba(255,255,255,0.04);
 }
 
+/* 간편로그인 */
+
 .social-title {
-  margin-top: 70px;
+
+  margin-top: 46px;
 
   text-align: center;
 
-  color: rgba(255,255,255,0.6);
+  color:
+    rgba(255,255,255,0.5);
 
-  font-size: 18px;
+  font-size: 15px;
 }
+
+/* 아이콘 */
 
 .social-row {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
 
-  margin-top: 24px;
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 18px;
 }
 
-.social-btn {
-  width: 74px;
-  height: 74px;
+/* 버튼 */
 
-  border-radius: 24px;
+.social-btn {
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 20px;
 
   border: none;
 
-  background: rgba(255,255,255,0.08);
+  background:
+    rgba(255,255,255,0.06);
 
   cursor: pointer;
 
   transition: 0.2s;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-
-  font-size: 34px;
-
-  color: white;
 }
 
 .social-btn:hover {
-  transform: translateY(-4px);
+
+  transform: translateY(-3px);
 }
+
+/* 이미지 */
 
 .social-btn img {
-  width: 34px;
-  height: 34px;
+
+  width: 30px;
+  height: 30px;
 }
 
+/* 색 */
+
 .kakao {
+
   background: #ffe812;
 }
 
 .naver {
-  background: #03c75a;
 
-  font-weight: 900;
+  background: #03c75a;
 }
 
 .apple {
+
   background: black;
 }
 
+/* 찾기 */
+
 .find-link {
-  margin-top: 36px;
+
+  margin-top: 28px;
 
   text-align: center;
 
-  color: rgba(255,255,255,0.5);
+  color:
+    rgba(255,255,255,0.45);
 
   text-decoration: none;
 
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .find-link:hover {
+
   color: white;
 }
 
-/* 반응형 */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1024px) {
 
   .login-box {
+
     flex-direction: column;
 
     min-height: auto;
   }
 
   .login-left {
-    min-height: 480px;
 
-    padding: 60px;
+    min-height: 420px;
+
+    padding: 56px;
   }
 
   .left-content h1 {
-    font-size: 82px;
+
+    font-size: 72px;
   }
 
   .left-content p {
-    font-size: 24px;
+
+    font-size: 20px;
   }
 
   .login-right {
+
     width: 100%;
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
 
   .login-page {
+
     padding: 0;
   }
 
   .login-box {
+
     border-radius: 0;
+
+    min-height: 100vh;
   }
 
   .login-left {
+
     display: none;
   }
 
   .mobile-logo {
+
     display: block;
 
-    font-size: 38px;
+    font-size: 30px;
+
     font-weight: 900;
 
     color: #ff8b38;
 
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   .login-right {
-    padding: 80px 36px;
+
+    width: 100%;
+
+    padding: 70px 30px;
   }
 
   .login-right h2 {
-    font-size: 56px;
+
+    font-size: 44px;
+
+    margin-bottom: 34px;
   }
 
   .login-right input {
-    height: 76px;
-    font-size: 20px;
+
+    height: 62px;
+
+    font-size: 17px;
   }
 
   .main-btn,
   .sub-btn {
-    height: 78px;
 
-    font-size: 26px;
+    height: 64px;
+
+    font-size: 20px;
+  }
+
+  .social-btn {
+
+    width: 58px;
+    height: 58px;
+  }
+
+  .social-btn img {
+
+    width: 28px;
+    height: 28px;
   }
 }

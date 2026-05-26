@@ -133,7 +133,7 @@ header {
 
 .logo {
 
-  font-size: 30px;
+  font-size: 22px;
 
   font-weight: 900;
 
@@ -235,27 +235,28 @@ header {
 
 .hero-left h1 {
 
-  font-size: 118px;
+  font-size: 86px;
 
-  line-height: 1;
+  line-height: 1.05;
 
   font-weight: 900;
 
-  letter-spacing: -6px;
+  letter-spacing: -4px;
 
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 /* 설명 */
 
 .hero-left p {
 
-  font-size: 28px;
+  font-size: 22px;
 
-  line-height: 1.8;
+  line-height: 1.9;
 
-  color:
-    rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.66);
+
+  font-weight: 500;
 }
 
 /* 오른쪽 */
