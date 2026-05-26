@@ -1,4 +1,4 @@
-import { auth, db }
+import { auth }
 from "./firebase.js";
 
 import {
@@ -10,14 +10,7 @@ import {
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-import {
-
-  doc,
-  setDoc
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+/* form */
 
 const signupForm =
   document.getElementById("signupForm");
@@ -39,6 +32,8 @@ signupForm.addEventListener(
 
     try {
 
+      /* 회원가입 */
+
       const userCredential =
         await createUserWithEmailAndPassword(
           auth,
@@ -46,27 +41,13 @@ signupForm.addEventListener(
           password
         );
 
-      const user =
-        userCredential.user;
-
       /* 닉네임 저장 */
 
-      await updateProfile(user, {
-
-        displayName: nickname
-
-      });
-
-      /* firestore 저장 */
-
-      await setDoc(
-        doc(db, "users", user.uid),
+      await updateProfile(
+        userCredential.user,
         {
 
-          nickname: nickname,
-          email: email,
-          createdAt: new Date()
-
+          displayName: nickname
         }
       );
 
@@ -80,8 +61,6 @@ signupForm.addEventListener(
       console.error(error);
 
       alert(error.message);
-
     }
-
   }
 );

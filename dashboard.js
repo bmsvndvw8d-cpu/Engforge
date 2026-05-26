@@ -16,7 +16,7 @@ const userName =
 const logoutBtn =
   document.getElementById("logoutBtn");
 
-/* 로그인 상태 확인 */
+/* 로그인 상태 */
 
 onAuthStateChanged(auth, (user) => {
 
