@@ -428,4 +428,148 @@ body {
   box-shadow:
     0 12px 30px
     rgba(255,107,0,0.25);
+
+    /* 모바일 대응 */
+
+@media (max-width: 768px){
+
+  .layout{
+
+    flex-direction:row;
+  }
+
+  /* 사이드바 축소 */
+
+  .sidebar{
+
+    width:88px;
+
+    min-width:88px;
+
+    padding-top:28px;
+  }
+
+  .sidebar-logo{
+
+    font-size:34px;
+
+    margin-bottom:26px;
+  }
+
+  .sidebar-menu{
+
+    gap:18px;
+  }
+
+  .menu-btn{
+
+    width:58px;
+    height:58px;
+
+    font-size:18px;
+
+    border-radius:20px;
+  }
+
+  /* 핵심 */
+
+  .main-content{
+
+    min-width:0;
+
+    width:100%;
+
+    padding:34px 22px 120px;
+  }
+
+  /* 상단 */
+
+  .topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:24px;
+  }
+
+  .hero h1{
+
+    font-size:54px;
+
+    line-height:1;
+  }
+
+  .hero p{
+
+    font-size:18px;
+  }
+
+  .top-right{
+
+    width:100%;
+
+    justify-content:space-between;
+
+    align-items:center;
+  }
+
+  .create-btn{
+
+    height:56px;
+
+    padding:0 28px;
+
+    font-size:16px;
+
+    border-radius:18px;
+  }
+
+  .user-box{
+
+    align-items:flex-end;
+  }
+
+  .user-name{
+
+    font-size:16px;
+  }
+
+  .logout-btn{
+
+    font-size:14px;
+  }
+
+  /* 카드 */
+
+  .cards{
+
+    grid-template-columns:1fr;
+
+    gap:24px;
+  }
+
+  .card{
+
+    width:100%;
+  }
+
+  .card-thumb{
+
+    height:180px;
+  }
+
+  /* 도움말 */
+
+  .help-btn{
+
+    width:72px;
+    height:72px;
+
+    right:18px;
+    bottom:18px;
+
+    font-size:34px;
+  }
+}
 }
