@@ -24,13 +24,18 @@ const password =
 const loginBtn =
   document.getElementById("loginBtn");
 
+const signupBtn =
+  document.getElementById("signupBtn");
+
 const googleBtn =
   document.getElementById("googleBtn");
 
+const loginForm =
+  document.getElementById("loginForm");
 
-/* 로그인 */
+/* 로그인 함수 */
 
-loginBtn.addEventListener("click", () => {
+function login() {
 
   signInWithEmailAndPassword(
 
@@ -54,6 +59,34 @@ loginBtn.addEventListener("click", () => {
     alert(error.message);
 
   });
+}
+
+/* 버튼 로그인 */
+
+loginBtn.addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  login();
+
+});
+
+/* 엔터 로그인 */
+
+loginForm.addEventListener("submit", (e) => {
+
+  e.preventDefault();
+
+  login();
+
+});
+
+/* 회원가입 이동 */
+
+signupBtn.addEventListener("click", () => {
+
+  window.location.href =
+    "signup.html";
 
 });
 
