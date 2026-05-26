@@ -1,115 +1,67 @@
-import { auth }
-from "./firebase.js";
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
+  getAuth,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-  signInWithEmailAndPassword,
+/* Firebase */
 
-  GoogleAuthProvider,
+const firebaseConfig = {
 
-  signInWithPopup
+  apiKey: "YOUR_API_KEY",
 
-}
+  authDomain: "YOUR_AUTH_DOMAIN",
 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  projectId: "YOUR_PROJECT_ID",
 
-/* 요소 */
+  storageBucket: "YOUR_STORAGE_BUCKET",
 
-const email =
-  document.getElementById("email");
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
 
-const password =
-  document.getElementById("password");
+  appId: "YOUR_APP_ID"
+};
 
-const loginBtn =
-  document.getElementById("loginBtn");
+const app = initializeApp(firebaseConfig);
 
-const signupBtn =
-  document.getElementById("signupBtn");
+const auth = getAuth(app);
 
-const googleBtn =
-  document.getElementById("googleBtn");
+/* 로그인 */
 
 const loginForm =
   document.getElementById("loginForm");
 
-/* 로그인 함수 */
+loginForm.addEventListener(
+  "submit",
+  async (e) => {
 
-function login() {
+    e.preventDefault();
 
-  signInWithEmailAndPassword(
+    const email =
+      document.getElementById("email").value;
 
-    auth,
+    const password =
+      document.getElementById("password").value;
 
-    email.value,
+    try {
 
-    password.value
+      await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
-  )
-
-  .then(() => {
-
-    window.location.href =
-      "dashboard.html";
-
-  })
-
-  .catch((error) => {
-
-    alert(error.message);
-
-  });
-}
-
-/* 버튼 로그인 */
-
-loginBtn.addEventListener("click", (e) => {
-
-  e.preventDefault();
-
-  login();
-
-});
-
-/* 엔터 로그인 */
-
-loginForm.addEventListener("submit", (e) => {
-
-  e.preventDefault();
-
-  login();
-
-});
-
-/* 회원가입 이동 */
-
-signupBtn.addEventListener("click", () => {
-
-  window.location.href =
-    "signup.html";
-
-});
-
-/* 구글 로그인 */
-
-googleBtn.addEventListener("click", () => {
-
-  const provider =
-    new GoogleAuthProvider();
-
-  signInWithPopup(auth, provider)
-
-    .then(() => {
+      /* 성공 시 마이페이지 */
 
       window.location.href =
         "dashboard.html";
 
-    })
+    } catch (error) {
 
-    .catch((error) => {
-
-      alert(error.message);
-
-    });
-
-});
+      alert("로그인 실패");
+      console.error(error);
+    }
+  }
+);
