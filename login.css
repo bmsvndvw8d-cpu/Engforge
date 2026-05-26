@@ -6,7 +6,7 @@
 
 body{
 
-  font-family:"Pretendard",sans-serif;
+  font-family:"SUIT", sans-serif;
 
   background:
     radial-gradient(
@@ -63,9 +63,7 @@ body{
   backdrop-filter:blur(20px);
 }
 
-/* =========================
-   LEFT
-========================= */
+/* LEFT */
 
 .login-left{
 
@@ -77,8 +75,6 @@ body{
 
   padding:72px;
 }
-
-/* glow */
 
 .fire-bg{
 
@@ -137,53 +133,47 @@ body{
   z-index:10;
 }
 
-/* 로고 */
-
 .logo{
 
   color:#ff8b38;
 
   font-size:26px;
 
-  font-weight:800;
+  font-weight:700;
 
   margin-bottom:56px;
 }
-
-/* 제목 */
 
 .left-content h1{
 
   font-size:86px;
 
-  font-weight:900;
+  font-weight:700;
 
-  line-height:1.04;
+  line-height:1.02;
 
   letter-spacing:-4px;
 
   color:white;
 
   margin-bottom:30px;
-}
 
-/* 설명 */
+  word-break:keep-all;
+}
 
 .left-content p{
 
   font-size:22px;
 
-  line-height:1.9;
+  line-height:1.8;
 
   color:
-    rgba(255,255,255,0.66);
+    rgba(255,255,255,0.68);
 
   font-weight:500;
 }
 
-/* =========================
-   RIGHT
-========================= */
+/* RIGHT */
 
 .login-right{
 
@@ -205,27 +195,25 @@ body{
   justify-content:center;
 }
 
-/* 모바일 로고 */
-
 .mobile-logo{
 
   display:none;
 }
 
-/* 로그인 */
-
 .login-right h2{
 
   font-size:52px;
 
-  font-weight:900;
+  font-weight:700;
+
+  letter-spacing:-2px;
 
   color:white;
 
   margin-bottom:40px;
 }
 
-/* form */
+/* FORM */
 
 #loginForm{
 
@@ -233,8 +221,6 @@ body{
 
   flex-direction:column;
 }
-
-/* input */
 
 .login-right input{
 
@@ -258,26 +244,15 @@ body{
   margin-bottom:18px;
 
   outline:none;
-
-  transition:0.2s;
-}
-
-.login-right input:focus{
-
-  background:
-    rgba(255,255,255,0.09);
-
-  border:
-    1px solid rgba(255,140,66,0.3);
 }
 
 .login-right input::placeholder{
 
   color:
-    rgba(255,255,255,0.35);
+    rgba(255,255,255,0.36);
 }
 
-/* 버튼 */
+/* BUTTON */
 
 .main-btn,
 .sub-btn{
@@ -290,14 +265,12 @@ body{
 
   font-size:22px;
 
-  font-weight:800;
+  font-weight:700;
 
   cursor:pointer;
 
   transition:0.25s;
 }
-
-/* 메인 */
 
 .main-btn{
 
@@ -319,8 +292,6 @@ body{
     rgba(255,122,26,0.28);
 }
 
-/* 서브 */
-
 .sub-btn{
 
   margin-top:18px;
@@ -333,17 +304,11 @@ body{
   color:white;
 }
 
-.sub-btn:hover{
-
-  background:
-    rgba(255,255,255,0.04);
-}
-
 /* 간편로그인 */
 
 .social-title{
 
-  margin-top:46px;
+  margin-top:44px;
 
   text-align:center;
 
@@ -352,8 +317,6 @@ body{
 
   font-size:15px;
 }
-
-/* row */
 
 .social-row{
 
@@ -365,8 +328,6 @@ body{
 
   margin-top:18px;
 }
-
-/* 버튼 */
 
 .social-btn{
 
@@ -393,36 +354,31 @@ body{
   transform:translateY(-3px);
 }
 
-/* 아이콘 */
-
 .social-btn img{
 
-  width:28px;
-  height:28px;
+  width:26px;
+  height:26px;
 
   object-fit:contain;
+
+  display:block;
 }
 
-/* 개별 색 */
+/* 개별 */
 
 .google{
-
-  background:
-    rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.08);
 }
 
 .kakao{
-
   background:#ffe812;
 }
 
 .naver{
-
   background:#03c75a;
 }
 
 .apple{
-
   background:#111111;
 }
 
@@ -442,14 +398,7 @@ body{
   font-size:16px;
 }
 
-.find-link:hover{
-
-  color:white;
-}
-
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media (max-width:1024px){
 
@@ -483,9 +432,7 @@ body{
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width:768px){
 
@@ -512,7 +459,7 @@ body{
 
     font-size:30px;
 
-    font-weight:900;
+    font-weight:700;
 
     color:#ff8b38;
 
@@ -529,8 +476,6 @@ body{
   .login-right h2{
 
     font-size:44px;
-
-    margin-bottom:34px;
   }
 
   .login-right input{
@@ -552,11 +497,5 @@ body{
 
     width:58px;
     height:58px;
-  }
-
-  .social-btn img{
-
-    width:26px;
-    height:26px;
   }
 }
