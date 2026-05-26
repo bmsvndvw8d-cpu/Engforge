@@ -1,11 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: "Pretendard", sans-serif;
+body{
+
+  font-family:"Pretendard",sans-serif;
 
   background:
     radial-gradient(
@@ -15,39 +16,39 @@ body {
     ),
     #020817;
 
-  min-height: 100vh;
+  min-height:100vh;
 
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 
 /* 전체 */
 
-.login-page {
+.login-page{
 
-  width: 100%;
+  width:100%;
 
-  min-height: 100vh;
+  min-height:100vh;
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  justify-content: center;
+  justify-content:center;
 
-  padding: 32px;
+  padding:32px;
 }
 
 /* 박스 */
 
-.login-box {
+.login-box{
 
-  width: 100%;
+  width:100%;
 
-  max-width: 1280px;
+  max-width:1280px;
 
-  min-height: 760px;
+  min-height:760px;
 
-  display: flex;
+  display:flex;
 
   background:
     rgba(5,15,32,0.92);
@@ -55,41 +56,41 @@ body {
   border:
     1px solid rgba(255,255,255,0.06);
 
-  border-radius: 34px;
+  border-radius:34px;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  backdrop-filter: blur(20px);
+  backdrop-filter:blur(20px);
 }
 
 /* =========================
    LEFT
 ========================= */
 
-.login-left {
+.login-left{
 
-  flex: 1.08;
+  flex:1.08;
 
-  position: relative;
+  position:relative;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  padding: 72px;
+  padding:72px;
 }
 
 /* glow */
 
-.fire-bg {
+.fire-bg{
 
-  position: absolute;
+  position:absolute;
 
-  width: 560px;
-  height: 560px;
+  width:560px;
+  height:560px;
 
-  right: -120px;
-  top: 50%;
+  right:-120px;
+  top:50%;
 
-  transform: translateY(-50%);
+  transform:translateY(-50%);
 
   background:
     radial-gradient(
@@ -99,29 +100,29 @@ body {
       transparent 72%
     );
 
-  filter: blur(36px);
+  filter:blur(36px);
 
   animation:
     fireMove 7s ease-in-out infinite;
 }
 
-@keyframes fireMove {
+@keyframes fireMove{
 
-  0% {
+  0%{
 
     transform:
       translateY(-50%)
       scale(1);
   }
 
-  50% {
+  50%{
 
     transform:
       translateY(-52%)
       scale(1.05);
   }
 
-  100% {
+  100%{
 
     transform:
       translateY(-50%)
@@ -129,64 +130,64 @@ body {
   }
 }
 
-.left-content {
+.left-content{
 
-  position: relative;
+  position:relative;
 
-  z-index: 10;
+  z-index:10;
 }
 
 /* 로고 */
 
-.logo {
+.logo{
 
-  color: #ff8b38;
+  color:#ff8b38;
 
-  font-size: 26px;
+  font-size:26px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  margin-bottom: 56px;
+  margin-bottom:56px;
 }
 
 /* 제목 */
 
-.left-content h1 {
+.left-content h1{
 
-  font-size: 86px;
+  font-size:86px;
 
-  font-weight: 900;
+  font-weight:900;
 
-  line-height: 1.04;
+  line-height:1.04;
 
-  letter-spacing: -4px;
+  letter-spacing:-4px;
 
-  color: white;
+  color:white;
 
-  margin-bottom: 30px;
+  margin-bottom:30px;
 }
 
 /* 설명 */
 
-.left-content p {
+.left-content p{
 
-  font-size: 22px;
+  font-size:22px;
 
-  line-height: 1.9;
+  line-height:1.9;
 
   color:
     rgba(255,255,255,0.66);
 
-  font-weight: 500;
+  font-weight:500;
 }
 
 /* =========================
    RIGHT
 ========================= */
 
-.login-right {
+.login-right{
 
-  width: 460px;
+  width:460px;
 
   background:
     linear-gradient(
@@ -195,71 +196,73 @@ body {
       rgba(2,8,23,0.98)
     );
 
-  padding: 72px 46px;
+  padding:72px 46px;
 
-  display: flex;
+  display:flex;
 
-  flex-direction: column;
+  flex-direction:column;
 
-  justify-content: center;
+  justify-content:center;
 }
 
-.mobile-logo {
+/* 모바일 로고 */
 
-  display: none;
+.mobile-logo{
+
+  display:none;
 }
 
 /* 로그인 */
 
-.login-right h2 {
+.login-right h2{
 
-  font-size: 52px;
+  font-size:52px;
 
-  font-weight: 900;
+  font-weight:900;
 
-  color: white;
+  color:white;
 
-  margin-bottom: 40px;
+  margin-bottom:40px;
 }
 
 /* form */
 
-#loginForm {
+#loginForm{
 
-  display: flex;
+  display:flex;
 
-  flex-direction: column;
+  flex-direction:column;
 }
 
 /* input */
 
-.login-right input {
+.login-right input{
 
-  width: 100%;
+  width:100%;
 
-  height: 66px;
+  height:66px;
 
-  border: none;
+  border:none;
 
-  border-radius: 22px;
+  border-radius:22px;
 
-  padding: 0 24px;
+  padding:0 24px;
 
   background:
     rgba(255,255,255,0.06);
 
-  color: white;
+  color:white;
 
-  font-size: 18px;
+  font-size:18px;
 
-  margin-bottom: 18px;
+  margin-bottom:18px;
 
-  outline: none;
+  outline:none;
 
-  transition: 0.2s;
+  transition:0.2s;
 }
 
-.login-right input:focus {
+.login-right input:focus{
 
   background:
     rgba(255,255,255,0.09);
@@ -268,7 +271,7 @@ body {
     1px solid rgba(255,140,66,0.3);
 }
 
-.login-right input::placeholder {
+.login-right input::placeholder{
 
   color:
     rgba(255,255,255,0.35);
@@ -277,39 +280,39 @@ body {
 /* 버튼 */
 
 .main-btn,
-.sub-btn {
+.sub-btn{
 
-  width: 100%;
+  width:100%;
 
-  height: 68px;
+  height:68px;
 
-  border-radius: 24px;
+  border-radius:24px;
 
-  font-size: 22px;
+  font-size:22px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  cursor: pointer;
+  cursor:pointer;
 
-  transition: 0.25s;
+  transition:0.25s;
 }
 
 /* 메인 */
 
-.main-btn {
+.main-btn{
 
-  background: #ff7a1a;
+  background:#ff7a1a;
 
-  color: white;
+  color:white;
 
-  border: none;
+  border:none;
 
-  margin-top: 4px;
+  margin-top:4px;
 }
 
-.main-btn:hover {
+.main-btn:hover{
 
-  transform: translateY(-2px);
+  transform:translateY(-2px);
 
   box-shadow:
     0 10px 26px
@@ -318,19 +321,19 @@ body {
 
 /* 서브 */
 
-.sub-btn {
+.sub-btn{
 
-  margin-top: 18px;
+  margin-top:18px;
 
-  background: transparent;
+  background:transparent;
 
   border:
     1px solid rgba(255,255,255,0.08);
 
-  color: white;
+  color:white;
 }
 
-.sub-btn:hover {
+.sub-btn:hover{
 
   background:
     rgba(255,255,255,0.04);
@@ -338,140 +341,145 @@ body {
 
 /* 간편로그인 */
 
-.social-title {
+.social-title{
 
-  margin-top: 46px;
+  margin-top:46px;
 
-  text-align: center;
+  text-align:center;
 
   color:
     rgba(255,255,255,0.5);
 
-  font-size: 15px;
+  font-size:15px;
 }
 
-/* 아이콘 */
+/* row */
 
-.social-row {
+.social-row{
 
-  display: flex;
+  display:flex;
 
-  justify-content: center;
+  justify-content:center;
 
-  gap: 14px;
+  gap:14px;
 
-  margin-top: 18px;
+  margin-top:18px;
 }
 
 /* 버튼 */
 
-.social-btn {
+.social-btn{
 
-  width: 64px;
-  height: 64px;
+  width:64px;
+  height:64px;
 
-  border-radius: 20px;
+  border-radius:20px;
 
-  border: none;
+  border:none;
+
+  cursor:pointer;
+
+  transition:0.2s;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.social-btn:hover{
+
+  transform:translateY(-3px);
+}
+
+/* 아이콘 */
+
+.social-btn img{
+
+  width:28px;
+  height:28px;
+
+  object-fit:contain;
+}
+
+/* 개별 색 */
+
+.google{
 
   background:
-    rgba(255,255,255,0.06);
-
-  cursor: pointer;
-
-  transition: 0.2s;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+    rgba(255,255,255,0.08);
 }
 
-.social-btn:hover {
+.kakao{
 
-  transform: translateY(-3px);
+  background:#ffe812;
 }
 
-/* 이미지 */
+.naver{
 
-.social-btn img {
-
-  width: 30px;
-  height: 30px;
+  background:#03c75a;
 }
 
-/* 색 */
+.apple{
 
-.kakao {
-
-  background: #ffe812;
-}
-
-.naver {
-
-  background: #03c75a;
-}
-
-.apple {
-
-  background: black;
+  background:#111111;
 }
 
 /* 찾기 */
 
-.find-link {
+.find-link{
 
-  margin-top: 28px;
+  margin-top:28px;
 
-  text-align: center;
+  text-align:center;
 
   color:
     rgba(255,255,255,0.45);
 
-  text-decoration: none;
+  text-decoration:none;
 
-  font-size: 16px;
+  font-size:16px;
 }
 
-.find-link:hover {
+.find-link:hover{
 
-  color: white;
+  color:white;
 }
 
 /* =========================
    TABLET
 ========================= */
 
-@media (max-width: 1024px) {
+@media (max-width:1024px){
 
-  .login-box {
+  .login-box{
 
-    flex-direction: column;
+    flex-direction:column;
 
-    min-height: auto;
+    min-height:auto;
   }
 
-  .login-left {
+  .login-left{
 
-    min-height: 420px;
+    min-height:420px;
 
-    padding: 56px;
+    padding:56px;
   }
 
-  .left-content h1 {
+  .left-content h1{
 
-    font-size: 72px;
+    font-size:72px;
   }
 
-  .left-content p {
+  .left-content p{
 
-    font-size: 20px;
+    font-size:20px;
   }
 
-  .login-right {
+  .login-right{
 
-    width: 100%;
+    width:100%;
   }
 }
 
@@ -479,94 +487,76 @@ body {
    MOBILE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .login-page {
+  .login-page{
 
-    padding: 0;
+    padding:0;
   }
 
-  .login-box {
+  .login-box{
 
-    border-radius: 0;
+    border-radius:0;
 
-    min-height: 100vh;
+    min-height:100vh;
   }
 
-  .login-left {
+  .login-left{
 
-    display: none;
+    display:none;
   }
 
-  .mobile-logo {
+  .mobile-logo{
 
-    display: block;
+    display:block;
 
-    font-size: 30px;
+    font-size:30px;
 
-    font-weight: 900;
+    font-weight:900;
 
-    color: #ff8b38;
+    color:#ff8b38;
 
-    margin-bottom: 24px;
+    margin-bottom:24px;
   }
 
-  .login-right {
+  .login-right{
 
-    width: 100%;
+    width:100%;
 
-    padding: 70px 30px;
+    padding:70px 30px;
   }
 
-  .login-right h2 {
+  .login-right h2{
 
-    font-size: 44px;
+    font-size:44px;
 
-    margin-bottom: 34px;
+    margin-bottom:34px;
   }
 
-  .login-right input {
+  .login-right input{
 
-    height: 62px;
+    height:62px;
 
-    font-size: 17px;
+    font-size:17px;
   }
 
   .main-btn,
-  .sub-btn {
+  .sub-btn{
 
-    height: 64px;
+    height:64px;
 
-    font-size: 20px;
+    font-size:20px;
   }
 
-  .social-btn {
+  .social-btn{
 
-    width: 58px;
-    height: 58px;
+    width:58px;
+    height:58px;
   }
 
-  .social-btn img {
+  .social-btn img{
 
-  width: 28px;
-  height: 28px;
-
-  object-fit: contain;
-}
-
-/* 네이버 */
-
-.naver img {
-
-  width: 30px;
-
-  filter: brightness(0) invert(1);
-}
-
-/* 애플 */
-
-.apple img {
-
-  filter: brightness(0) invert(1);
-}
+    width:26px;
+    height:26px;
+  }
 }

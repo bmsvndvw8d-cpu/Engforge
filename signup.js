@@ -1,15 +1,10 @@
-import {
-
-  auth,
-  db
-
-}
-
+import { auth, db }
 from "./firebase.js";
 
 import {
 
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  updateProfile
 
 }
 
@@ -24,83 +19,69 @@ import {
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* 요소 */
+const signupForm =
+  document.getElementById("signupForm");
 
-const nickname =
-  document.getElementById("nickname");
+signupForm.addEventListener(
+  "submit",
+  async (e) => {
 
-const email =
-  document.getElementById("email");
+    e.preventDefault();
 
-const password =
-  document.getElementById("password");
+    const nickname =
+      document.getElementById("nickname").value;
 
-const passwordConfirm =
-  document.getElementById("passwordConfirm");
+    const email =
+      document.getElementById("email").value;
 
-const signupBtn =
-  document.getElementById("signupBtn");
+    const password =
+      document.getElementById("password").value;
 
-/* 회원가입 */
+    try {
 
-signupBtn.addEventListener("click", async () => {
+      const userCredential =
+        await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
 
-  if (
-    password.value !==
-    passwordConfirm.value
-  ) {
+      const user =
+        userCredential.user;
 
-    alert("비밀번호가 일치하지 않습니다.");
+      /* 닉네임 저장 */
 
-    return;
-  }
+      await updateProfile(user, {
 
-  try {
+        displayName: nickname
 
-    /* 회원가입 */
+      });
 
-    const userCredential =
+      /* firestore 저장 */
 
-      await createUserWithEmailAndPassword(
+      await setDoc(
+        doc(db, "users", user.uid),
+        {
 
-        auth,
+          nickname: nickname,
+          email: email,
+          createdAt: new Date()
 
-        email.value,
-
-        password.value
-
+        }
       );
 
-    const user =
-      userCredential.user;
+      alert("회원가입 성공!");
 
-    /* Firestore 저장 */
+      window.location.href =
+        "dashboard.html";
 
-    await setDoc(
+    } catch (error) {
 
-      doc(db, "users", user.uid),
+      console.error(error);
 
-      {
+      alert(error.message);
 
-        nickname: nickname.value,
-
-        email: email.value
-
-      }
-
-    );
-
-    alert("회원가입 성공");
-
-    window.location.href =
-      "login.html";
+    }
 
   }
-
-  catch(error) {
-
-    alert(error.message);
-
-  }
-
-});
+);

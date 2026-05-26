@@ -1,89 +1,47 @@
+import { auth }
+from "./firebase.js";
+
 import {
 
+  onAuthStateChanged,
   signOut
 
 }
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-import {
-
-  auth,
-  db
-
-}
-
-from "./firebase.js";
-
-import {
-
-  onAuthStateChanged
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-import {
-
-  doc,
-  getDoc
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-/* 이름 */
-
 const userName =
   document.getElementById("userName");
-
-/* 로그인 상태 */
-
-onAuthStateChanged(auth, async (user) => {
-
-  if(user) {
-
-    /* DB 가져오기 */
-
-    const docRef =
-      doc(db, "users", user.uid);
-
-    const docSnap =
-      await getDoc(docRef);
-
-    if(docSnap.exists()) {
-
-      userName.textContent =
-
-        docSnap.data().nickname;
-
-    }
-
-  }
-
-  else {
-
-    window.location.href =
-      "login.html";
-
-  }
-
-  /* 로그아웃 */
 
 const logoutBtn =
   document.getElementById("logoutBtn");
 
-logoutBtn.addEventListener("click", () => {
+/* 로그인 상태 확인 */
 
-  signOut(auth)
+onAuthStateChanged(auth, (user) => {
 
-    .then(() => {
+  if (user) {
 
-      window.location.href =
-        "login.html";
+    userName.textContent =
+      user.displayName || "사용자";
 
-    });
+  } else {
+
+    window.location.href =
+      "login.html";
+  }
 
 });
 
-});
+/* 로그아웃 */
+
+logoutBtn.addEventListener(
+  "click",
+  async () => {
+
+    await signOut(auth);
+
+    window.location.href =
+      "login.html";
+  }
+);
