@@ -614,4 +614,136 @@ header {
   position: relative;
 
   z-index: 2;
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+      180px 60px 100px;
+
+    gap: 80px;
+
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 92px;
+  }
+
+  .hero-content p {
+    font-size: 28px;
+  }
+
+  .forge-area {
+    width: 70vw;
+    height: 70vw;
+
+    min-width: 320px;
+    min-height: 320px;
+
+    max-width: 680px;
+    max-height: 680px;
+  }
+
+  .feature-section {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 100px 40px;
+
+    gap: 40px;
+  }
+
+  .feature-card {
+    width: 320px;
+
+    min-height: 420px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 28px 24px;
+  }
+
+  .logo {
+    font-size: 34px;
+  }
+
+  .login-btn {
+    width: 140px;
+    height: 64px;
+
+    font-size: 22px;
+  }
+
+  .hero {
+    padding:
+      160px 28px 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 72px;
+
+    line-height: 1.02;
+  }
+
+  .hero-content p {
+    font-size: 22px;
+
+    line-height: 1.8;
+  }
+
+  .forge-area {
+    width: 82vw;
+    height: 82vw;
+  }
+
+  .feature-section {
+    padding: 80px 24px;
+  }
+
+  .feature-card {
+    width: 100%;
+
+    max-width: 360px;
+
+    min-height: 360px;
+  }
+
+  .feature-card h2 {
+    font-size: 56px;
+  }
+
+  .feature-card p {
+    font-size: 22px;
+  }
+
+  .final-section {
+    padding: 160px 24px;
+  }
+
+  .final-box h2 {
+    font-size: 48px;
+  }
+
+  .final-box p {
+    font-size: 24px;
+  }
+
+}
 }
