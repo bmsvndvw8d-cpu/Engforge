@@ -5,468 +5,353 @@
 }
 
 body{
-  font-family:"SUIT",sans-serif;
-
+  font-family:'SUIT',sans-serif;
   background:#f3f5f9;
-
-  color:#07111f;
-
   overflow-x:hidden;
 }
 
-/* 전체 레이아웃 */
-
-.layout{
-  display:flex;
-
-  min-height:100vh;
-}
-
-/* 사이드바 */
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar{
   position:fixed;
-
-  top:0;
   left:0;
-  bottom:0;
+  top:0;
 
-  width:92px;
+  width:110px;
+  height:100vh;
 
   background:
     linear-gradient(
       180deg,
-      #031120,
-      #08192e
+      #06111f,
+      #03101d
     );
+
+  padding-top:40px;
 
   display:flex;
   flex-direction:column;
   align-items:center;
 
-  padding-top:36px;
-
   z-index:100;
 }
 
-.logo{
-  font-size:38px;
-
-  margin-bottom:34px;
+.sidebar-logo{
+  font-size:44px;
+  margin-bottom:40px;
 }
 
-.menu-list{
+.sidebar-menu{
   display:flex;
   flex-direction:column;
-
   gap:18px;
 }
 
 .menu-btn{
-  width:54px;
-  height:54px;
+  width:56px;
+  height:56px;
 
   border:none;
+  border-radius:20px;
 
-  border-radius:18px;
-
-  background:rgba(255,255,255,0.08);
+  background:#182433;
 
   color:white;
-
-  font-size:22px;
-  font-weight:800;
+  font-size:20px;
+  font-weight:700;
 
   cursor:pointer;
 
   transition:0.2s;
-}
-
-.menu-btn:hover{
-  transform:translateY(-2px);
 }
 
 .menu-btn.active{
   background:#ff7a1a;
 }
 
-/* 메인 */
+/* =========================
+   MAIN
+========================= */
 
 .main{
-  flex:1;
+  margin-left:110px;
 
-  margin-left:92px;
+  width:calc(100% - 110px);
 
-  padding:42px 28px;
+  min-height:100vh;
+
+  padding:48px 56px;
 }
 
-/* 컨텐츠 폭 제한 */
+/* =========================
+   TOP
+========================= */
 
-.main-inner{
-  width:min(1280px, calc(100% - 24px));
-
-  margin:0 auto;
-}
-
-/* 상단 */
-
-.topbar{
+.top-bar{
   display:flex;
-
   justify-content:space-between;
   align-items:flex-start;
 
-  gap:24px;
-
-  margin-bottom:34px;
-
-  flex-wrap:wrap;
+  margin-bottom:40px;
 }
 
-.topbar h1{
-  font-size:clamp(42px,5vw,64px);
-
+.title-wrap h1{
+  font-size:72px;
   font-weight:900;
-
-  margin-bottom:8px;
+  color:#071120;
 
   line-height:1;
 }
 
-.topbar p{
-  font-size:22px;
+.title-wrap p{
+  margin-top:12px;
 
-  color:#74819a;
+  color:#748096;
+  font-size:20px;
 }
 
-.top-right{
+.user-wrap{
   display:flex;
   align-items:center;
-
-  gap:18px;
-
-  flex-wrap:wrap;
+  gap:20px;
 }
-
-/* CTA */
 
 .create-btn{
-  height:54px;
-
-  padding:0 24px;
-
   border:none;
 
-  border-radius:16px;
-
   background:#ff7a1a;
-
   color:white;
 
-  font-size:16px;
-  font-weight:800;
+  padding:18px 28px;
+
+  border-radius:18px;
+
+  font-size:18px;
+  font-weight:700;
 
   cursor:pointer;
-
-  transition:0.2s;
 }
-
-.create-btn:hover{
-  transform:translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(255,122,26,0.22);
-}
-
-/* 유저 */
 
 .user-box{
   display:flex;
   flex-direction:column;
-
-  gap:2px;
 }
 
 .user-name{
-  font-size:18px;
+  font-size:20px;
   font-weight:800;
 }
 
-.logout-btn{
-  border:none;
+.logout{
+  margin-top:4px;
 
-  background:none;
+  font-size:15px;
 
-  color:#7f8ba3;
+  color:#7d8899;
 
-  font-size:14px;
-
-  cursor:pointer;
-
-  text-align:left;
+  text-decoration:none;
 }
 
-/* 필터 */
+/* =========================
+   FILTER
+========================= */
 
-.filter-bar{
+.filter-row{
   display:flex;
+  gap:12px;
 
-  gap:10px;
+  margin-bottom:36px;
 
   flex-wrap:wrap;
-
-  margin-bottom:28px;
 }
 
-.filter{
-  height:40px;
-
-  padding:0 18px;
+.filter-chip{
+  background:white;
 
   border:none;
 
-  border-radius:12px;
+  padding:12px 18px;
 
-  background:white;
+  border-radius:14px;
 
-  color:#516078;
-
-  font-size:14px;
+  font-size:15px;
   font-weight:700;
 
-  cursor:pointer;
+  color:#5f6b80;
 }
 
-.filter.active{
-  background:#07111f;
+/* =========================
+   CARD GRID
+========================= */
 
-  color:white;
-}
-
-/* 문제지 리스트 */
-
-.worksheet-list{
+.card-grid{
   display:grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(300px,1fr));
+    repeat(auto-fit,minmax(320px,1fr));
 
-  gap:18px;
+  gap:24px;
 }
 
-/* 카드 */
-
-.worksheet-card{
+.card{
   background:white;
 
-  border-radius:22px;
+  border-radius:28px;
 
-  padding:24px;
+  padding:28px;
 
-  box-shadow:
-    0 8px 24px rgba(0,0,0,0.05);
+  min-height:240px;
 
-  transition:0.2s;
-}
-
-.worksheet-card:hover{
-  transform:translateY(-4px);
-}
-
-.card-top{
   display:flex;
-
+  flex-direction:column;
   justify-content:space-between;
-  align-items:flex-start;
-
-  gap:16px;
-
-  margin-bottom:18px;
 }
 
-.card-top h2{
-  font-size:24px;
+.card h2{
+  font-size:34px;
   font-weight:900;
 
-  margin-bottom:6px;
+  line-height:1.2;
 
-  line-height:1.3;
+  color:#071120;
 }
 
-.card-top span{
-  font-size:15px;
+.card-sub{
+  margin-top:10px;
 
-  color:#7a879f;
+  color:#7c8798;
+  font-size:17px;
 }
 
-/* 난이도 */
-
-.difficulty{
-  padding:8px 14px;
-
-  border-radius:12px;
-
-  font-size:13px;
-  font-weight:800;
-
-  white-space:nowrap;
-}
-
-.high{
-  background:#ffe1d0;
-  color:#ff7a1a;
-}
-
-.mid{
-  background:#e7eefb;
-  color:#4567ff;
-}
-
-/* 정보 */
-
-.card-middle{
+.card-tags{
   display:flex;
-
   flex-wrap:wrap;
-
   gap:10px;
 
-  margin-bottom:20px;
+  margin-top:24px;
 }
 
-.meta{
-  background:#f3f5f9;
-
+.tag{
   padding:10px 14px;
+
+  background:#f3f5f9;
 
   border-radius:12px;
 
-  font-size:13px;
+  font-size:14px;
   font-weight:700;
 
-  color:#516078;
+  color:#657186;
 }
-
-/* 하단 */
 
 .card-bottom{
   display:flex;
-
   justify-content:space-between;
   align-items:center;
 
-  gap:12px;
-
-  flex-wrap:wrap;
+  margin-top:30px;
 }
 
-.card-bottom span{
-  font-size:13px;
-
-  color:#8894aa;
-}
-
-.card-bottom button{
-  height:42px;
-
-  padding:0 18px;
-
+.open-btn{
   border:none;
 
-  border-radius:12px;
-
-  background:#07111f;
-
+  background:#071120;
   color:white;
 
-  font-size:14px;
-  font-weight:800;
+  padding:12px 18px;
+
+  border-radius:14px;
+
+  font-weight:700;
 
   cursor:pointer;
 }
 
-/* 도움말 */
+/* =========================
+   HELP BTN
+========================= */
 
 .help-btn{
   position:fixed;
 
-  right:24px;
-  bottom:24px;
+  right:28px;
+  bottom:28px;
 
-  width:64px;
-  height:64px;
+  width:72px;
+  height:72px;
 
   border:none;
-
   border-radius:50%;
 
   background:#ff7a1a;
 
   color:white;
 
-  font-size:30px;
-  font-weight:900;
+  font-size:38px;
+  font-weight:800;
 
   cursor:pointer;
 
-  box-shadow:
-    0 10px 24px rgba(255,122,26,0.25);
+  z-index:999;
 }
 
-/* 모바일 */
+/* =========================
+   MOBILE
+========================= */
 
-@media (max-width:768px){
+@media(max-width:768px){
 
   .sidebar{
-    width:76px;
+    width:84px;
   }
 
   .main{
-    margin-left:76px;
+    margin-left:84px;
+    width:calc(100% - 84px);
 
-    padding:24px 18px;
+    padding:28px 20px;
   }
 
-  .main-inner{
+  .top-bar{
+    flex-direction:column;
+    gap:24px;
+  }
+
+  .title-wrap h1{
+    font-size:48px;
+  }
+
+  .title-wrap p{
+    font-size:16px;
+  }
+
+  .user-wrap{
     width:100%;
-  }
-
-  .topbar{
-    gap:18px;
-  }
-
-  .topbar h1{
-    font-size:44px;
-  }
-
-  .topbar p{
-    font-size:18px;
-  }
-
-  .top-right{
-    width:100%;
+    justify-content:space-between;
   }
 
   .create-btn{
-    width:100%;
+    padding:14px 20px;
+    font-size:15px;
   }
 
-  .worksheet-list{
+  .card-grid{
     grid-template-columns:1fr;
   }
 
-  .worksheet-card{
-    padding:20px;
+  .card{
+    min-height:auto;
   }
 
-  .card-top h2{
-    font-size:20px;
+  .card h2{
+    font-size:28px;
   }
 
   .help-btn{
-    width:58px;
-    height:58px;
-
-    font-size:28px;
+    width:62px;
+    height:62px;
+    font-size:30px;
   }
 }
