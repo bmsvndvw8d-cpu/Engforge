@@ -548,7 +548,25 @@ body {
 
   .social-btn img {
 
-    width: 28px;
-    height: 28px;
-  }
+  width: 28px;
+  height: 28px;
+
+  object-fit: contain;
+}
+
+/* 네이버 */
+
+.naver img {
+
+  width: 30px;
+
+  filter: brightness(0) invert(1);
+}
+
+/* 애플 */
+
+.apple img {
+
+  filter: brightness(0) invert(1);
+}
 }
